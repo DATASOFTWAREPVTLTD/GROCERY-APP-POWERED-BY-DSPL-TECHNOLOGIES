@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="Profile CSS.css">
+    <script src="https://kit.fontawesome.com/cacf32ff12.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="far fa-credit-card"></i>
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fas fa-tv"></i>
+                </a>
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fas fa-tasks"></i>
+                </a>
+                <a onclick="tabs(4)" class="tab">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Information</h1>
+                <h2>Name</h2>
+                <input type="text" class="input" value="Tanupriya Jain">
+                <h2>Gender</h2>
+                <input type="text" class="input" value="Jan 17, 2003">
+                <h2>Birthday</h2>
+                <input type="text" class="input" value="female">
+                <h2>Email</h2>
+                <input type="email" class="input" value="Tanupriyajain@gmail.com">
+                <h2>Password</h2>
+                <input type="password" class="input" >
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="Payment tabShow">
+                <h1>Shipment Information</h1>
+                <h2>Billing Adress</h2>
+                <input type="text" class="input" placeholder="402, Sector 19, Noida, Uttar Pradesh">
+                <h2>Pincode</h2>
+                <input type="text" class="input" placeholder="190125">
+                <h2>Last Order Shipped On</h2>
+                <input type="number" class="input" placeholder="January 10, 2024">
+                <h2>Reedem Card</h2>
+                <input type="text" class="input" placeholder="enter gift code" >
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="Subscription tabShow">
+                <h1>Subscription Information</h1>
+                <h2>Payment Date</h2>
+               <p>December 10,2023 </p>
+                <h2>Date of Next Payment</h2>
+                <p>December 10, 2024</p>
+                <h2>Plan</h2>
+                <p>Yearly</p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="Privacy tabShow">
+                <h1>Privacy Setting</h1>
+                <h2>Manage Email Notification</h2>
+               <p></p>
+                <h2>Manage Privacy Settings</h2>
+                <p></p>
+                <h2>Terms Of Use</h2>
+                <p></p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="settings tabShow">
+                <h1>Account Setting</h1>
+                <h2>Hold Subscription</h2>
+                <p></p>
+                <h2>Cancel Subscription</h2>
+                <p></p>
+                <h2>Your Devices</h2>
+                <p></p>
+                <h2>Referrals</h2>
+                <p></p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Profile JS.js"></script>
+
+</body>
+</html>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    overflow-x: hidden;    
+
+}
+.container{
+    background: #fff;
+    width: 540px;
+    height: 470px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,0.5);
+}
+.leftbox{
+    float: left;
+    top: -5%;
+    left:5%;
+    position: absolute;
+    width: 15%;
+    height: 110%;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    box-shadow: 3px 3px 10px rgba(119,119,119,.5);
+    border: .1em solid #fff;
+}
+nav a{
+    list-style: none;
+    padding: 35px;
+    color: #fff;
+    font-size: 1.1em;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+nav a:hover{
+    color: #00538a;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+nav a:first-child{
+    margin-top: 7px;
+}
+nav a.active{
+    color:#00538a;
+}
+
+.rightbox{
+    width: 60%;
+    margin-left: 27%;
+    /* padding: 5px; */
+}
+.tabShow{
+    transition: all .5s ease-in;
+    width: 80%;
+    position: absolute;
+}
+h1{
+    color: #2980b9;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+h2{
+    color: #777;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+
+}
+.input,p{
+    border: 0;
+    border-bottom: 1px solid #3fb6a8;
+    width: 80%;
+    font-size: .7em;
+    padding: 7px 0;
+    color: #070707;
+    outline: none;
+
+}
+span{
+    font-size: .7em;
+    color: #777;
+
+}
+.btn{
+    text-transform: uppercase;
+    font-size: 15px;
+    border:0;
+    color: #fff;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    padding: 7px 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-top: 15px;
+
+}
+.tabShow{
+    transition: all 0.5s ease-in;
+    width: 80%;
+    position: absolute;
+}
+
+
+</style>
+
+
+<script>
+
+const tabBtn=document.querySelectorAll(".tab");
+    const tab = document.querySelectorAll(".tabShow");
+
+    function tabs(panelIndex) {
+        tab.forEach(function(node) {
+            node.style.display = "none";
+        });
+        tab[panelIndex].style.display = "block";
+    }
+    tabs(0);
+     $(".tab").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+})
+
+
+</script>
